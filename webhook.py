@@ -1,13 +1,17 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, abort, jsonify
 
 app = Flask(__name__)
 
 @app.route('/api/webhook', methods=['POST'])
 def webhook():
-    data = request.json
-    print("Received webhook data:", data)  # فقط برای تست، در کنسول نمایش می‌دهد
+    auth = request.headers.get('Authorization')
+    if auth != 'Bearer MySecretToken123456':
+        abort(401)  # دسترسی غیرمجاز
 
-    # اینجا می‌تونی داده‌ها رو پردازش یا ذخیره کنی
+    data = request.json
+    print("Received webhook data:", data)
+
+    # پردازش داده‌ها
 
     return jsonify({"status": "success"}), 200
 
