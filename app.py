@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+app.run(host='0.0.0.0', port=8000)
 
 app = Flask(__name__)
 
