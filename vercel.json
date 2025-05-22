@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/*.py": {
+      "runtime": "python3.9"
+    }
+  },
+  "routes": [
+    { "src": "/settings", "dest": "/api/settings.py" },
+    { "src": "/oauth", "dest": "/api/oauth.py" },
+    { "src": "/", "dest": "/api/index.py" }
+  ]
+}
