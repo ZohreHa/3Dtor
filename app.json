@@ -1,0 +1,10 @@
+{
+  "name": "3Dtor",
+  "slug": "3dtor",
+  "baseUrl": "https://3dtor.vercel.app",
+  "icon": "https://3dtor.vercel.app/icon.png",
+  "developer": {
+    "name": "Zohreh Hashemi",
+    "email": "your-email@example.com"
+  }
+}
